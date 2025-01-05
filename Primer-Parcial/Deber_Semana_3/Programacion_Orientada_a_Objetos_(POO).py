@@ -4,17 +4,20 @@ class ClimaDiario:
     def __init__(self):
         self.temperaturas = []  # Encapsulando la lista de temperaturas
 
-    # Método para agregar una temperatura diaria
+#metodo para agregar una temperatura diaria
+
     def agregar_temperatura(self, temperatura):
         self.temperaturas.append(temperatura)
 
-    # Método para calcular el promedio de las temperaturas semanales
+# metodo para calcular el promedio de las temperaturas semanales
+
     def calcular_promedio(self):
         if len(self.temperaturas) == 0:
             return 0
         return sum(self.temperaturas) / len(self.temperaturas)
 
-    # Método para ingresar las temperaturas de los 7 días de la semana
+# metodo para ingresar las temperaturas de los 7 días de la semana
+
     def ingresar_temperaturas(self):
         for i in range(7):
             while True:
@@ -25,7 +28,7 @@ class ClimaDiario:
                 except ValueError:
                     print("Por favor, ingrese un número válido para la temperatura.")
 
-    # Método para mostrar el promedio de las temperaturas
+#metodo para mostrar el promedio de las temperaturas
     def mostrar_promedio(self):
         promedio = self.calcular_promedio()
         print(f"\nEl promedio semanal de temperaturas es: {promedio:.2f}°C")
